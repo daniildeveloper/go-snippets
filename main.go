@@ -5,11 +5,9 @@ import (
 )
 
 func main() {
-	var arr [10]int
-	arr[0] = 143
+	// var numbers map[string]int
 
-	var arr2 = [3]int{1, 3, 5}
-	var slice []int
-	slice = arr2[:2]
-	fmt.Printf("%d\n", len(slice)) //1
+	numbers := make(map[string]int)
+	numbers["one"] = 1
+	fmt.Printf("First number is %d\n", numbers["one"])
 }
