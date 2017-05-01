@@ -5,9 +5,14 @@ import (
 )
 
 func main() {
-	// var numbers map[string]int
+	x := 3
+	y := 4
+	a, b := sumAndProduct(x, y)
 
-	numbers := make(map[string]int)
-	numbers["one"] = 1
-	fmt.Printf("First number is %d\n", numbers["one"])
+	fmt.Printf("%d + %d = %d\n", x, y, a)
+	fmt.Printf("%d * %d = %d\n", x, y, b)
+}
+
+func sumAndProduct(A, B int) (int, int) {
+	return A + B, A * B
 }
