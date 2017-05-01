@@ -2,12 +2,17 @@ package main
 
 import (
 	"fmt"
-	"reflect"
+	"runtime"
 )
 
 func main() {
-	i := 1
-	t := reflect.TypeOf(i)
+	go say("world")
+	say("hello")
+}
 
-	fmt.Println(t)
+func say(s string) {
+	for i := 0; i < 5; i++ {
+		runtime.Gosched()
+		fmt.Printf("%s \n", s)
+	}
 }
